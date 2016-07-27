@@ -1,0 +1,53 @@
+{
+  "name": "image-dashboard",
+  "version": "1.0.0",
+  "description": "Image Dashboard",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/webpack-dev-server --inline --devtool sourcemap",
+    "build": "rimraf dist && webpack --bail --progress --profile"
+  },
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-cookies": "^1.5.0",
+    "angular-loading-bar": "^0.8.0",
+    "angular-ui-router": "^0.2.18",
+    "bootstrap": "^3.3.6",
+    "bootstrap-sass": "^3.3.6",
+    "bootstrap-social": "^4.11.0",
+    "font-awesome": "^4.5.0",
+    "jquery": "^2.2.1",
+    "lodash": "^4.6.1",
+    "ng-infinite-scroll": "^1.2.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.3",
+    "css-loader": "^0.23.1",
+    "expose-loader": "^0.7.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "html-webpack-plugin": "^2.9.0",
+    "jshint": "^2.9.1",
+    "jshint-loader": "^0.8.3",
+    "ng-annotate-loader": "^0.1.0",
+    "node-sass": "^3.4.2",
+    "open-browser-webpack-plugin": "0.0.2",
+    "path": "^0.12.7",
+    "raw-loader": "^0.5.1",
+    "resolve-url": "^0.2.1",
+    "rimraf": "^2.4.4",
+    "sass-loader": "^3.1.2",
+    "sockjs-client": "^1.0.3",
+    "style-loader": "^0.13.0",
+    "webpack": "1.12.14",
+    "webpack-dev-server": "1.14.1"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "private": true
+}

@@ -1,0 +1,12 @@
+<div ui-view class="container-fluid" infinite-scroll='ctrl.loadMore(ctrl.mediaData)' infinite-scroll-distance='1'>
+    <div class="row">
+        <div>
+            <div class="col-md-4 col-sm-12" ng-repeat="image in ctrl.images">
+                <a ui-sref="dashboard.selectedImage({id: image.id})">
+                    <img ng-src="{{image.images.low_resolution.url}}"/>
+                </a>
+            </div>
+        </div>
+    </div>
+    <button ng-if="ctrl.mediaData.pagination.next_url" type="button" ng-click="ctrl.loadMore(ctrl.mediaData)">Load More</button>
+</div>

@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <button ui-sref="dashboard" class="btn btn-primary pull-left"><< Back</button>
+            <button ng-disabled="ctrl.disableNext" class="btn btn-primary pull-right btn-pagination" ng-click="ctrl.loadNext()">Next >></button>
+            <button ng-disabled="ctrl.disablePrev" class="btn btn-primary pull-right btn-pagination" ng-click="ctrl.loadPrev()"><< Previous</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p><strong>Comments:</strong></p>
+            <p ng-repeat="comment in ctrl.imageComments" ng-bind="comment.text"></p>
+            <div class="row">
+                <div class="col-md-2">
+                    <input class="form-control" ng-model="ctrl.newCommentText">
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-primary" ng-disabled="!ctrl.newCommentText" ng-click="ctrl.addComment()">Add Comment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <a href="">
+                        <img ng-src="{{ctrl.imageInfo.images.standard_resolution.url}}">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
